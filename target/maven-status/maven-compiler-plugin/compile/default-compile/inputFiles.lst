@@ -1,5 +1,6 @@
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\service\impl\ExerciseTemplateServiceImpl.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\security\JwtAuthenticationFilter.java
+C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\dto\exercise\ExerciseTemplateResponse.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\dto\exercise\ExerciseTemplateRequest.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\repository\MuscleGroupRepository.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\repository\ExerciseTemplateRepository.java
@@ -9,6 +10,7 @@ C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\dto\wor
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\model\ExerciseTemplate.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\dto\auth\LoginRequest.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\repository\WorkoutExerciseRepository.java
+C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\controller\TestController.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\dto\user\PasswordChangeRequest.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\exception\ResourceNotFoundException.java
 C:\Users\user\Desktop\test\MuscleMetrics\src\main\java\com\musclemetrics\service\impl\MuscleGroupServiceImpl.java

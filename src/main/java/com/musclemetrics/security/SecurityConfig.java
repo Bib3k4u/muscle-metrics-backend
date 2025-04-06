@@ -50,7 +50,13 @@ public class SecurityConfig {
                 .exceptionHandling().and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**", "/api/exercise-templates/public/**", "/error").permitAll()
+                        .requestMatchers(
+                                "/api/auth/**",
+                                "/api/exercise-templates/public/**",
+                                "/api/muscle-groups/public/**",
+                                "/api/public/**",
+                                "/error")
+                        .permitAll()
                         .anyRequest().authenticated());
 
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);

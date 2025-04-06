@@ -21,15 +21,66 @@ public class MuscleGroupController {
     @GetMapping
     @PreAuthorize("isAuthenticated()")
     public ResponseEntity<List<MuscleGroup>> getAllMuscleGroups() {
-        List<MuscleGroup> muscleGroups = muscleGroupService.findAll();
-        return ResponseEntity.ok(muscleGroups);
+        try {
+            List<MuscleGroup> muscleGroups = muscleGroupService.findAll();
+            return ResponseEntity.ok(muscleGroups);
+        } catch (Exception e) {
+            // Log the error for debugging
+            System.err.println("Error retrieving muscle groups: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    /**
+     * Public endpoint to retrieve all muscle groups without authentication
+     * This helps prevent timeouts when the user is not authenticated
+     */
+    @GetMapping("/public")
+    public ResponseEntity<List<MuscleGroup>> getPublicMuscleGroups() {
+        try {
+            List<MuscleGroup> muscleGroups = muscleGroupService.findAll();
+            return ResponseEntity.ok(muscleGroups);
+        } catch (Exception e) {
+            // Log the error
+            System.err.println("Error retrieving public muscle groups: " + e.getMessage());
+            e.printStackTrace();
+
+            // Return an empty list instead of an error to avoid client-side issues
+            return ResponseEntity.ok(List.of());
+        }
     }
 
     @GetMapping("/{id}")
     @PreAuthorize("isAuthenticated()")
     public ResponseEntity<MuscleGroup> getMuscleGroupById(@PathVariable String id) {
-        MuscleGroup muscleGroup = muscleGroupService.findById(id);
-        return ResponseEntity.ok(muscleGroup);
+        try {
+            MuscleGroup muscleGroup = muscleGroupService.findById(id);
+            return ResponseEntity.ok(muscleGroup);
+        } catch (Exception e) {
+            // Log the error for debugging
+            System.err.println("Error retrieving muscle group by ID: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    /**
+     * Public endpoint to retrieve muscle group by ID without authentication
+     */
+    @GetMapping("/public/{id}")
+    public ResponseEntity<MuscleGroup> getPublicMuscleGroupById(@PathVariable String id) {
+        try {
+            MuscleGroup muscleGroup = muscleGroupService.findById(id);
+            return ResponseEntity.ok(muscleGroup);
+        } catch (Exception e) {
+            // Log the error
+            System.err.println("Error retrieving public muscle group by ID: " + e.getMessage());
+            e.printStackTrace();
+
+            // Return a 404 Not Found instead of a 500 Internal Server Error
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping
