@@ -9,10 +9,15 @@ com\musclemetrics\repository\WorkoutExerciseRepository.class
 com\musclemetrics\dto\workout\WorkoutExerciseRequest$ExerciseSetRequest.class
 com\musclemetrics\MuscleMetricsApplication.class
 com\musclemetrics\repository\WorkoutRepository.class
+com\musclemetrics\exception\ResourceNotFoundException.class
+com\musclemetrics\config\WebConfig.class
+com\musclemetrics\repository\WorkoutTemplateRepository.class
 com\musclemetrics\controller\AuthController.class
 com\musclemetrics\controller\MuscleGroupController.class
+com\musclemetrics\service\impl\WorkoutTemplateServiceImpl.class
 com\musclemetrics\dto\auth\LoginRequest.class
 com\musclemetrics\security\JwtTokenProvider.class
+com\musclemetrics\service\WorkoutTemplateService.class
 com\musclemetrics\repository\MuscleGroupRepository.class
 com\musclemetrics\controller\UserController.class
 com\musclemetrics\model\User.class
@@ -24,8 +29,10 @@ com\musclemetrics\dto\auth\SignupRequest.class
 com\musclemetrics\controller\WorkoutController.class
 com\musclemetrics\repository\UserRepository.class
 com\musclemetrics\security\SecurityConfig.class
+com\musclemetrics\config\TemplatesDataInitializer.class
 com\musclemetrics\controller\UserController$MessageResponse.class
 com\musclemetrics\model\Workout.class
+com\musclemetrics\controller\WorkoutTemplateController.class
 com\musclemetrics\security\JwtAuthenticationFilter.class
 com\musclemetrics\controller\MuscleGroupController$MuscleGroupRequest.class
 com\musclemetrics\service\impl\AuthServiceImpl.class
@@ -35,7 +42,10 @@ com\musclemetrics\repository\ExerciseTemplateRepository.class
 com\musclemetrics\model\WorkoutExercise$ExerciseSet.class
 com\musclemetrics\model\WorkoutExercise.class
 com\musclemetrics\service\WorkoutService.class
+com\musclemetrics\model\WorkoutTemplate.class
+com\musclemetrics\config\CorsFilter.class
 com\musclemetrics\model\MuscleGroup.class
+com\musclemetrics\service\impl\ExerciseTemplateServiceImpl.class
 com\musclemetrics\service\impl\WorkoutServiceImpl.class
 com\musclemetrics\controller\ExerciseTemplateController.class
 com\musclemetrics\dto\user\PasswordChangeRequest.class
